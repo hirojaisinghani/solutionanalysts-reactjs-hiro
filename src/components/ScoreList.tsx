@@ -1,40 +1,38 @@
-import Reac, { memo } from 'react'
+import React, { memo } from 'react'
 import { useSelector  } from 'react-redux';
 import { formatLeaderboardData } from '../utils';
 import {
-  ItemBox,
-  ItemRanking,
-  ItemPicture,
-  ItemName,
-  ItemScore,
+  User,
+  Rank,
+  Picture,
+  Name,
+  Score,
   Container,
-  Leadheader
 } from './StyleComponents';
 
 const ScoreList = () => {
+  // get data from redux
   const scoreList: string[] = useSelector((state: any) => state.score.scoreList);
-  console.log(5, scoreList);
   return (
     <Container>
-      <h2>Leaderboard For Real Update Score</h2>
-        {/* <Leadheader>
-          <h2>Leaderboard For Real Update Score</h2>
-        </Leadheader> */}
-
       { 
+        // format and itereate data
         formatLeaderboardData(scoreList).map((item) => {
           return (
-            <ItemBox ranking={item.rank}>
-            <ItemRanking ranking={item.rank}>{item.rank}</ItemRanking>
-            <ItemPicture />
-            <ItemName>{item.displayName}</ItemName>
-            <ItemScore>{item.score}pt</ItemScore>
-            </ItemBox>
+            <div key={item.rank}>
+            <User ranking={item.rank}>
+              <Rank ranking={item.rank}>{item.rank}</Rank>
+              <Picture />
+              <Name>{item.displayName}</Name>
+              <Score>{item.score}pt</Score>
+            </User>
+            </div>
           )
           
         }) 
       }
     </Container>
+    
   )
 }
 export default memo(ScoreList);

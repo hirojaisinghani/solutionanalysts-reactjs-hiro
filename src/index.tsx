@@ -7,6 +7,7 @@ import App from './App';
 import rootReducer from './reducers/rootReducer';
 import reportWebVitals from './reportWebVitals';
 
+// creare store for get data to display
 const store = createStore(rootReducer)
 ReactDOM.render(
   <React.StrictMode>

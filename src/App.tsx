@@ -4,9 +4,7 @@ import { formatLeaderboardData } from './utils'
 import { INTERVAL } from './constants';
 import ScoreList from './components/ScoreList'
 
-import './App.css';
-
-function App() {
+const  App = () => {
   //Use for all the dispatch actions
   const dispatch = useDispatch();
   //get initail data from reducer

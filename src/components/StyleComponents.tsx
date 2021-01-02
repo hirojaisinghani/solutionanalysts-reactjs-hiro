@@ -5,11 +5,7 @@ import { RANK_COLOR } from '../constants';
 interface RankingProps {
   ranking: any,
 };
-interface PictureProps {
-  picure: String
-}
-
-export const ListContainer = styled.div`
+export const Container = styled.div`
   background-color: #f7f5f6;
   position: absolute;
   width: 90%;
@@ -20,7 +16,7 @@ export const ListContainer = styled.div`
   transform: translateX(-50%);
 `;
 
-export const ItemBox  = styled.div<RankingProps>`
+export const User  = styled.div<RankingProps>`
   width: 90%;
   height: 50px;
   position: absolute;
@@ -34,7 +30,7 @@ export const ItemBox  = styled.div<RankingProps>`
   border-bottom: 1px solid #efeded;
 `;
 
-export const ItemRanking = styled.div<RankingProps>`
+export const Rank = styled.div<RankingProps>`
   width: 22px;
   text-align: center;
   border-radius: 50%;
@@ -46,12 +42,12 @@ export const ItemRanking = styled.div<RankingProps>`
   background-color: ${(props) => RANK_COLOR[props.ranking - 1] || '#8eb9f5'};
 `;
 
-export const ItemName = styled.div`
-  color: #ffffff;
+export const Name = styled.div`
+  color: #000000;
   margin-left: 8px;
 `;
 
-export const ItemPicture = styled.div`
+export const Picture = styled.div`
   background-color: #e5e5e5;
   background-size: 100%;
   width: 36px;
@@ -61,34 +57,13 @@ export const ItemPicture = styled.div`
   border-style: solid;
   border-color: rgb(255, 255, 255);
   border-image: initial;
-  background-image: url('./profile.jpeg');
+  background-image: url('./logo.png');
   
 `;
 
-export const ItemScore = styled.div`
+export const Score = styled.div`
   -webkit-box-flex: 1;
   flex-grow: 1;
   text-align: right;
   color: #e46a86;
 `;
-
-export const Container = styled.div`
-  width: 550px;
-  margin: 80px auto;
-  @media (max-width: 550px) {
-    width: 100%;
-  }
-`;
-export const Leadheader = styled.div`
-    width: 100%;
-    height: 70px;
-    background: rgba(0, 168, 232, 0.79);
-    text-align: center;
-    border-radius: 5px 5px 0 0;
-    h2 {
-      margin: 0;
-      color: #fefefe;
-      padding-top: 20px;
-    }
-`;
-
