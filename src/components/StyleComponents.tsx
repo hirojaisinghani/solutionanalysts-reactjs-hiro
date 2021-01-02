@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { RANKING_COLOR } from '../constants';
+import { RANK_COLOR } from '../constants';
 
 
 interface RankingProps {
@@ -43,7 +43,7 @@ export const ItemRanking = styled.div<RankingProps>`
   margin-right: 8px;
   color: #fff;
   font-size: 14px;
-  background-color: ${(props) => RANKING_COLOR[props.ranking - 1] || '#8eb9f5'};
+  background-color: ${(props) => RANK_COLOR[props.ranking - 1] || '#8eb9f5'};
 `;
 
 export const ItemName = styled.div`
@@ -61,7 +61,7 @@ export const ItemPicture = styled.div`
   border-style: solid;
   border-color: rgb(255, 255, 255);
   border-image: initial;
-  background-image: url('./logo.png');
+  background-image: url('./profile.jpeg');
   
 `;
 

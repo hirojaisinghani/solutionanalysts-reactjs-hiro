@@ -58,7 +58,7 @@ const initState = {
         "userID": "u-10",
         "displayName": "Dophine",
         "picture": "",
-        "score": 15400
+        "score": 154000
       }
     ]
     

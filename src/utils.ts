@@ -2,7 +2,7 @@ import { MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER } from './constants' // constant d
 
 // get random number using Math.random()
 const getRandomNumber = (score: number) =>  {
-  let randomNumber = Math.floor(Math.random()*(MAX_RANDOM_NUMBER - MIN_RANDOM_NUMBER) + MIN_RANDOM_NUMBER);
+  let randomNumber = Math.ceil(Math.random()*(MAX_RANDOM_NUMBER - MIN_RANDOM_NUMBER) + MIN_RANDOM_NUMBER);
   return score + randomNumber;
 }
 
